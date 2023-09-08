@@ -1,4 +1,8 @@
 /* styles.css */
+main {
+    padding-top: 100px; /* Adjust as needed to avoid content being hidden under the header */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -15,9 +19,44 @@ header {
     transition: all 0.2s; /* Transition for header size change */
 }
 
+/* Add styles for the sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    transition: all 0.2s; /* Transition for header size change */
+}
+
 header.shrink {
     padding: 10px;
 }
+
+/* Style for navigation menu items */
+.sticky-header nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.sticky-header nav li {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.sticky-header nav a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .logo {
     flex: 1; /* Takes 50% of the screen width */
@@ -50,6 +89,8 @@ nav a {
     text-decoration: none;
     color: white;
 }
+
+
 
 .contact-info {
     text-align: right;
