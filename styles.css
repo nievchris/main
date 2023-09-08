@@ -1,6 +1,6 @@
 /* styles.css */
 main {
-    padding-top: 100px; /* Adjust as needed to avoid content being hidden under the header */
+    padding-top: 0px; /* Adjust as needed to avoid content being hidden under the header */
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    background-color: white;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -19,51 +19,24 @@ header {
     transition: all 0.2s; /* Transition for header size change */
 }
 
-/* Add styles for the sticky header */
-.sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #007BFF;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    transition: all 0.2s; /* Transition for header size change */
+h1 {
+    font-size: 38px;
+    font-weight: 700;
 }
 
-header.shrink {
-    padding: 10px;
+h2 {
+    font-size: 30px;
+    font-weight: 600;
 }
 
-/* Style for navigation menu items */
-.sticky-header nav ul {
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-    justify-content: flex-end;
-}
-
-.sticky-header nav li {
-    font-size: 18px;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.sticky-header nav a {
-    text-decoration: none;
-    color: white;
-}
-
+/* Style for logo */
 
 .logo {
     flex: 1; /* Takes 50% of the screen width */
 }
 
 .logo img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     transition: all 0.2s; /* Transition for logo size change */
 }
@@ -90,12 +63,172 @@ nav a {
     color: white;
 }
 
+header.shrink {
+    padding: 10px 50px;
+}
 
+/* Shrink Header and Logo on Scroll */
+body.scrolled {
+    padding-top: 0; /* Reduce padding on scroll */
+}
+
+.logo img.shrink-logo {
+    max-width: 30%; /* Reduce logo size on scroll */
+}
+
+
+/* Add styles for the sticky header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    transition: all 0.2s; /* Transition for header size change */
+}
+
+/* Style for navigation menu items */
+.sticky-header nav ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.sticky-header nav li {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.sticky-header nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Home Section Styles */
+.home-content, #contact, .cta-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+.home-content {
+    padding: 0px 100px 25px;
+}
+
+#cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image:linear-gradient(180deg, #6e74b6 20%,#77d4fc 100%);
+    padding: 50px;
+}
+
+.home-left {
+    flex: .60;
+    padding: 20px;
+}
+
+#contact-left, .cta-left {
+    flex: 1;
+    padding: 20px;
+}
+
+.home-right, #contact-right, .cta-right {
+    flex: 1;
+    text-align: center;
+}
+
+
+/* Style for the feature section */
+#features {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 50px;
+}
+
+.feature-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.feature {
+    flex-basis: calc(25% - 20px); /* Four columns with some spacing */
+    text-align: center;
+    margin: 50px 0;
+}
+
+.feature p {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#feature-p{
+    font-weight: 500;
+    font-size: 17px;
+}
+
+#features img {
+    width: 20%;
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+/* CSS for the footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 5px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
 
 .contact-info {
-    text-align: right;
     font-size: 14px;
 }
+
+
+
 
 /* Mobile-responsive navigation */
 @media (max-width: 768px) {
@@ -121,42 +254,4 @@ nav a {
         padding: 0;
     }
 
-    .contact-info {
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-/* Responsive Images */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* About Section Styles */
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.about-left {
-    flex: 1;
-    padding: 20px;
-}
-
-.about-right {
-    flex: 1;
-    text-align: center;
-}
-
-/* Shrink Header and Logo on Scroll */
-body.scrolled {
-    padding-top: 0; /* Reduce padding on scroll */
-}
-
-.logo img.shrink-logo {
-    max-width: 70%; /* Reduce logo size on scroll */
 }
