@@ -2,15 +2,24 @@
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     const logo = document.querySelector(".logo img");
-    const stickyHeader = document.querySelector(".sticky-header");
 
-    if (window.scrollY > 60) {
+    if (window.scrollY > 50) {
         header.classList.add("shrink");
         logo.classList.add("shrink-logo");
-        stickyHeader.classList.add("shrink");
     } else {
         header.classList.remove("shrink");
         logo.classList.remove("shrink-logo");
-        stickyHeader.classList.remove("shrink");
+    }
+});
+
+window.addEventListener("scroll", () => {
+    const stickyHeader = document.querySelector(".sticky-header");
+
+    if (stickyHeader) {
+        if (window.scrollY > 50) {
+            stickyHeader.classList.add("shrink");
+        } else {
+            stickyHeader.classList.remove("shrink");
+        }
     }
 });
