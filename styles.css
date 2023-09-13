@@ -313,9 +313,19 @@ img {
 }
 
 
+
 .contact-info {
     font-size: 16px;
     font-weight: 600;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #fff;;
 }
 
 /* CSS for the footer */
@@ -439,7 +449,7 @@ footer {
 
 }
 
-@media (max-width: 425px){
+@media (max-width: 425px) {
     #cta {
         padding: 0;
     }
